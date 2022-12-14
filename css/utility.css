@@ -3,22 +3,18 @@ i{
     margin:5px;
 }
 /* Button */
-.btn{
-    
+.btn{  
     display: inline-block;
     padding: 10px 30px;
     color: #fff;
     background-color:#b27092;
     border: none;
     border-radius: 5px; 
-    /* i couldn't customise the cursor: ; */
-    /* cursor:url(./assets/image/cursor/wreath.png) */
 }
 
 .btn:hover {
     opacity: 0.8;
 }
-
 
 .btn, .bg {
    background: #b27092;
@@ -41,7 +37,6 @@ i{
     flex-direction: row;
     flex-wrap:wrap;
     width: 100%;
-    
 }
 
 .flex-columns .column {

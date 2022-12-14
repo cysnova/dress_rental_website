@@ -102,9 +102,6 @@ img {
 
 .hero .content h1 {
     font-size: 55px;
-    /* is it weird to put a margin-top here?
-    i want to put the h1 down, so that it doesnt
-    cover by a photo? */
     margin-top: 100px;
 }
 
