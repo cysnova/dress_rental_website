@@ -112,6 +112,7 @@ img {
     font-size: 23px;
     max-width: 600px;
     margin: 0 10px 20px;
+    font-size:30px;
 }
 
 /* overlay effect */
@@ -133,10 +134,47 @@ img {
     background: url('../images/home/blog.jpg') no-repeat center center/cover;
     height: 40vh;
 }
+/* Section header */
+.section-header {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.section-header h2{
+    font-size: 40px;
+    margin: 5px 0;
+    padding:2px;
+    color:#b27092;
+}
+
+.section-padding {
+    padding: 20px 20px 40px;
+}
+
+/* Flex grid */
+.flex-grid .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.flex-grid .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+
 
 #product img:hover {
     opacity: 0.7;
 }
+
+
 
 /* dress-renal form */
 .dress-rental-form {
@@ -191,6 +229,8 @@ img {
 .footer .social > * {
     margin: 15px;
 }
+
+
 
 /* Mobile */
 @media(max-width: 768px) {
