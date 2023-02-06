@@ -153,30 +153,65 @@ img {
 }
 
 /* Flex grid */
-.flex-grid .row {
+
+.gallery{
+    padding-bottom: 8px;
+}
+
+.gallery .cards-wrapper{
     display: flex;
     flex-wrap: wrap;
-    padding: 0 4px;
 }
+    
 
-.flex-grid .column {
-    flex: 25%;
+.card-overlay, .card-img{
+    width: 100%;
+    height: 100%;
+}
+    
+.card{
+    width: 25%;
+    height: 30vw;
     max-width: 25%;
     padding: 0 4px;
+    position: relative;
+    overflow: hidden;
 }
+    
 
-
-
-#product img:hover {
-    opacity: 0.7;
+.card:hover .card-overlay{
+    left: 0;
 }
+    
 
+.card-overlay{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background-color: rgb(144, 88, 110);
+    opacity: 0.6;
+    color: #ffffff;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: left 0.7s;
+}
+    
+
+.card-img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+    
 
 
 /* dress-renal form */
 .dress-rental-form {
     width: 100%;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .dress-rental-form label {
@@ -188,21 +223,35 @@ img {
     margin-bottom: 15px;
 }
 
-.dress-rental-form input {
+.dress-rental-form input{
     width: 100%;
     padding: 4px;
     height: 40px;
     border: #f5f5f5 1px solid;
+    font-size:15px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.dress-rental-form input:focus {
+.dress-rental-form textarea{
+    width: 100%;
+    padding: 4px;
+    height: 80px;
+    border: #f5f5f5 1px solid;
+    font-size:15px;
+    font-family: 'Courier New', Courier, monospace;
+    resize: none;
+}
+
+.dress-rental-form input:focus ,.dress-rental-form textarea:focus{
     outline-color:#a7286e;
 }
 
 .dress-rental-form .btn {
     padding: 12px 0;
-    margin-top: 20px;
+    margin-top: 5px;
+    cursor:pointer;
 }
+
 
 /* Footer */
 .footer {
@@ -247,6 +296,10 @@ img {
         max-width: 100%;
     }
    
+    .gallery .card{
+        flex: 100%;
+        max-width: 100%;
+    }
 
  
 }

@@ -14,6 +14,8 @@ i{
 
 .btn:hover {
     opacity: 0.8;
+    color: black;
+    background-color: #be779c;
 }
 
 .btn, .bg {
@@ -27,6 +29,26 @@ i{
     border: 1px solid #fff;
 }
 
+.card-overlay-btn{
+    background-color: #b27092;
+    font-size: 16px;
+    font-weight: 200;
+    border-radius: 10px;
+    color: #fff;
+    border: 1px solid #fff;
+    padding:10px;
+    margin:10px;
+}
+
+.card-overlay-btn:hover{
+    background-color: #d96fa6;
+    border:3px solid white;
+    transition: 0.7s;
+    cursor:pointer;
+
+}
+   
+    
 /*Flex columns */
 .flex-columns.flex-reverse .row {
     flex-direction: row-reverse;

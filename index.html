@@ -8,7 +8,6 @@
     <meta name="keywords" content="dress,designer,rental,gorgeous,LOOK GORGEOUS">
     <link rel="stylesheet" href="css/utility.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/lightbox.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ribeye&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ed4d299927.js" crossorigin="anonymous"></script>
@@ -24,9 +23,11 @@
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#catalogue">Dress</a><li>
+            <li><a href="#gallery">Dress</a><li>
             <li><a href="#blog">Blog</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#shopping">Shopping Cart</a></li>
+
           </ul>
         </nav>
       </div>
@@ -60,73 +61,76 @@
           </div>
         </div>
         </section>
-      <!-- Catalogue -->
-      <section id="catalogue" class="product flex-grid section-padding">
+        
+      <!-- Gallery -->
+      <section class="gallery">
         <header class="section-header">
           <h2>We help you find the best dress to <strong>LOOK GORGEOUS</strong></h2>
         </header>
-        <div class="row">
-          <div class="column">
-            <a href="./assets/image/product/product1.jpg"
-              data-lightbox="product"
-              data-title="product 1 - $ 100">
-              <img src="./assets/image/product/product1.jpg" alt="girl in pink dress" />
-            </a>
-            <a
-              href="./assets/image/product/product2.jpg"
-              data-lightbox="product"
-              data-title="product 2 - $ 100"
-            >
-              <img src="./assets/image/product/product2.jpg" alt="girl in yellow dress" />
-            </a>
+        <div class="cards-wrapper">
+          <div class="card">
+            <div class="card-overlay">
+              <h2 class="card-overlay-heading">Product 1</h2>
+              <h3 class="card-overlay-paragraph">Price: $100.00</h3>
+              <button type="button" class="card-overlay-btn">Order Now</button>
+            </div>
+            <img src="./assets/image/product/product1.jpg" class="card-img" />
           </div>
-          <div class="column">
-            <a
-              href="./assets/image/product/product3.jpg"
-              data-lightbox="product"
-              data-title="product 3 -  $ 100"
-            >
-              <img src="./assets/image/product/product3.jpg" alt="girl in dark navy blue dress" />
-            </a>
-            <a
-              href="./assets/image/product/product4.jpg"
-              data-lightbox="product"
-              data-title="product 4 - $ 100"
-            >
-              <img src="./assets/image/product/product4.jpg" alt="girl in gold dress" />
-            </a>
+          <div class="card">
+            <div class="card-overlay">
+              <h2 class="card-overlay-heading">Product 2</h2>
+              <h3 class="card-overlay-paragraph">Price: $100.00</h3>
+              <button type="button" class="card-overlay-btn">Order Now</button>
+            </div>
+            <img src="./assets/image/product/product2.jpg" class="card-img" />
           </div>
-          <div class="column">
-            <a
-              href="./assets/image/product/product5.jpg"
-              data-lightbox="product"
-              data-title="product 5 - $ 100"
-            >
-              <img src="./assets/image/product/product5.jpg" alt="girl in shiny green dress" />
-            </a>
-            <a
-              href="./assets/image/product/product6.jpg"
-              data-lightbox="product"
-              data-title="product 6 - $ 100"
-            >
-              <img src="./assets/image/product/product6.jpg" alt="girl in light blue dress" />
-            </a>
+          <div class="card">
+            <div class="card-overlay">
+              <h2 class="card-overlay-heading">Product 3</h2>
+              <h3 class="card-overlay-paragraph">Price: $100.00</h3>
+              <button type="button" class="card-overlay-btn">Order Now</button>
+            </div>
+            <img src="./assets/image/product/product3.jpg" class="card-img" />
           </div>
-          <div class="column">
-            <a
-              href="./assets/image/product/product7.jpg"
-              data-lightbox="product"
-              data-title="product 7 - $ 100"
-            >
-              <img src="./assets/image/product/product7.jpg" alt="girl in silver dress" />
-            </a>
-            <a
-              href="./assets/image/product/product8.jpg"
-              data-lightbox="product"
-              data-title="product 8 - $ 100"
-            >
-              <img src="./assets/image/product/product8.jpg" alt="girl in gold dress" />
-            </a>
+          <div class="card">
+            <div class="card-overlay">
+              <h2 class="card-overlay-heading">Product 4</h2>
+              <h3 class="card-overlay-paragraph">Price: $100.00</h3>
+              <button type="button" class="card-overlay-btn">Order Now</button>
+            </div>
+            <img src="./assets/image/product/product4.jpg" class="card-img" />
+          </div>
+          <div class="card">
+            <div class="card-overlay">
+              <h2 class="card-overlay-heading">Product 5</h2>
+              <h3 class="card-overlay-paragraph">Price: $100.00</h3>
+              <button type="button" class="card-overlay-btn">Order Now</button>
+            </div>
+            <img src="./assets/image/product/product5.jpg" class="card-img" />
+          </div>
+          <div class="card">
+            <div class="card-overlay">
+              <h2 class="card-overlay-heading">Product 6</h2>
+              <h3 class="card-overlay-paragraph">Price: $100.00</h3>
+              <button type="button" class="card-overlay-btn">Order Now</button>
+            </div>
+            <img src="./assets/image/product/product6.jpg" class="card-img" />
+          </div>
+          <div class="card">
+            <div class="card-overlay">
+              <h2 class="card-overlay-heading">Product 7</h2>
+              <h3 class="card-overlay-paragraph">Price: $100.00</h3>
+              <button type="button" class="card-overlay-btn">Order Now</button>
+            </div>
+            <img src="./assets/image/product/product7.jpg" class="card-img" />
+          </div>
+          <div class="card">
+            <div class="card-overlay">
+              <h2 class="card-overlay-heading">Product 8</h2>
+              <h3 class="card-overlay-paragraph">Price: $100.00</h3>
+              <button type="button" class="card-overlay-btn">Order Now</button>
+            </div>
+            <img src="./assets/image/product/product8.jpg" class="card-img" />
           </div>
         </div>
       </section>
@@ -167,7 +171,7 @@
           </div>
           <div class="column">
             <div class="column-2 bg">
-              <h2>Dress Rental Form</h2>
+              <h2>Enquiry</h2>
               <form action="" class="dress-rental-form">
                 <div class="form-control">
                   <label for="name"></label>
@@ -205,6 +209,10 @@
                       placeholder="Enter the product number"
                     />
                   </div>
+                  <div class="form-control">
+                    <label for="message"></label>
+                    <textarea rows="5" cols="100" name="message" id="message" placeholder="Enter your message"></textarea>
+                  </div>
                 <input type="submit" value="Send" id="submit" class="btn" />
               </form>
             </div>
@@ -221,15 +229,10 @@
         <a href="#"><i class="fa-brands fa-pinterest fa-2x"></i></a>
         <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
       </div>
-      <p>Copyright &copy; 2022 - LOOK GORGEOUS</p>
+      <p>Copyright &copy; 2023 - LOOK GORGEOUS</p>
     </footer>
 
-    <script
-      src="https://code.jquery.com/jquery-3.5.0.min.js"
-      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/lightbox.min.js"></script>
+  
     <script>
       const navbar = document.getElementById('navbar');
       let scrolled = false;
