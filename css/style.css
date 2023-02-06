@@ -299,13 +299,14 @@ img {
     .gallery .card{
         flex: 100%;
         max-width: 100%;
+        height:max-content;
     }
     
   
     .card-img{
     height: auto;
-  
     max-width: 100%;
+    object-fit: cover;
   
     }
  
