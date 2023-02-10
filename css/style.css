@@ -373,17 +373,11 @@ img {
 
 
 
-.HomeBtn
- {
-  background-color: #212529;
-  color: white;
-  border: none;
-  padding: 6px;
-  border-radius: 3px;
-  cursor: pointer;
-  margin-top: 10px;
+/* .container .cards-wrapper{
+    display: flex;
+    flex-wrap: wrap;
 }
-
+ */
 
 
 .container-top{
@@ -393,26 +387,21 @@ img {
         top:100px;
         justify-content: center;
         gap: 15px;
+        margin:10px;
+        padding:10px;
         
       }
+
 
 .totalPrice{
     font-size: 50px;
 }
 
-.cart-card{
-
-    position:relative;
-    top:100px;
-    left:465px;
-    border:2px solid black;
-    margin:10px; 
+.cart-container{
+    display:flex;
+    margin:100px 20px;
+    justify-content: center;
+    
 }
-
-.cart-card:last-child{
-    margin-bottom: 20px;
-}
-
-
 
 
