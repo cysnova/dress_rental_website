@@ -26,7 +26,7 @@ function generateCartItems(){
     container.innerHTML+=`<div class="card cart-card">
     <div class="card-overlay">
       <h2 class="card-overlay-heading">${product.name}</h2>
-      <h3 class="card-overlay-paragraph">Product Price: ${product.price}</h3>
+      <h3 class="card-overlay-paragraph">Product Price: $${product.price}</h3>
       <div class="buttons">
         <div class="quantity">${cart[pid]} item</div>
       </div>
