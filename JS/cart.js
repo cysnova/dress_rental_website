@@ -28,9 +28,7 @@ function generateCartItems(){
       <h2 class="card-overlay-heading">${product.name}</h2>
       <h3 class="card-overlay-paragraph">Product Price: ${product.price}</h3>
       <div class="buttons">
-        <i class="bi bi-dash-lg" onclick="subtract('${pid}')"></i>
-        <div class="quantity">${cart[pid]}</div>
-        <i class="bi bi-plus-lg" onclick="add('${pid}')"></i>
+        <div class="quantity">${cart[pid]} item</div>
       </div>
       <div class="subTotal">$${subtotal}</div>
       <i class="bi bi-trash3-fill" onclick="removeItem('${pid}')"></i>
