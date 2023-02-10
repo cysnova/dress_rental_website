@@ -316,18 +316,6 @@ img {
     font-size: 16px;
   }
 
- 
-  /**
-  * ! style rules for shopping-cart
-  **/
-  
-  .shopping-cart {
-    display: grid;
-    grid-template-columns: repeat(1, 320px);
-    justify-content: center;
-    gap: 15px;
-  }
-  
 
 
 /* Mobile */
@@ -364,33 +352,26 @@ img {
     }
 
     .container-card-img{
-        padding:10px;
-        margin:20px 10px;
         height: auto;
         max-width: 100%;
         object-fit: cover;
 
     }
 
-    .container .cart-card{
-        margin-top: 40px;
+    .cart-card{
         flex: 100%;
         max-width: 100%;
         height:max-content;
     }
+
+   
+      
 
 }
 
 
 /* cart */
 
-
-
-/* .container .cards-wrapper{
-    display: flex;
-    flex-wrap: wrap;
-}
- */
 
 
 .container-top{
