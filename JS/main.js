@@ -1,107 +1,97 @@
-let shop = document.getElementById("shop");
+document.body.onload = generateShop;
 
-/**
- * ! Basket to hold all the selected items
- * ? the getItem part is retrieving data from the local storage
- * ? if local storage is blank, basket becomes an empty array
- */
+var products = []
+var cart = {}
 
-let basket = JSON.parse(localStorage.getItem("data")) || [];
 
-/**
- * ! Generates the shop with product cards composed of
- * ! images, title, price, buttons, description
- */
+async function generateShop(){
+  
+    console.log("Generating shop...")
+    const res = await fetch(
+        "https://jsonblob.com/api/1072619027205210112"
+    )
 
-let generateShop = () => {
-  return (shop.innerHTML = shopItemsData
-    .map((x) => {
-      let { id, name, desc, img, price } = x;
-      let search = basket.find((y) => y.id === id) || [];
-      return `
-    <div id=product-id-${id} class="item">
-      <img width="220" src=${img} alt="">
-      <div class="details">
-        <h3>${name}</h3>
-        <p>${desc}</p>
-        <div class="price-quantity">
-          <h2>$ ${price} </h2>
-          <div class="buttons">
-            <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
-            <div id=${id} class="quantity">${
-        search.item === undefined ? 0 : search.item
-      }</div>
-            <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
+    const data = await res.json();
+  
+     const gallery= document.getElementsByClassName("cards-wrapper")[0];
+     products = data.shop;
+     for (var shop of products){
+      console.log(shop)
+      const box = `
+      
+        <div class="card">
+           <div class="card-overlay">
+             <h2 class="card-overlay-heading">${shop.name}</h2>
+             <h3 class="card-overlay-paragraph">Price: $${shop.price}</h3>
+             <div class="buttons" >
+             <i class="bi bi-dash-lg" onclick="subtract('${shop.id}')"></i>
+             <div class="quantity" data-pid="${shop.id}">0</div> 
+             <i class="bi bi-plus-lg" onclick="add('${shop.id}')"></i>
+             </div>
+             <button type="button" class="card-overlay-btn" onclick="order('${shop.id}')">Order Now</button>
+             </div> 
+             <img src="${shop.img}" class="card-img" />
           </div>
-        </div>
-      </div>
-  </div>
-    `;
-    })
-    .join(""));
-};
+      `
+      gallery.innerHTML +=box
+     }
 
-generateShop();
+   }
 
-/**
- * ! used to increase the selected product item quantity by 1
- */
 
-let increment = (id) => {
-  let selectedItem = id;
-  let search = basket.find((x) => x.id === selectedItem.id);
+function add(id){
+  order(id);
+}
 
-  if (search === undefined) {
-    basket.push({
-      id: selectedItem.id,
-      item: 1,
-    });
-  } else {
-    search.item += 1;
+function subtract(id){
+  if(id in cart){
+    if(cart[id] == 1){
+      delete cart[id];
+    } else{
+      cart[id]--;
+    }
+  }else{
+    
+    //do nothing
   }
+  let quantityDiv = document.querySelector(`.quantity[data-pid="${id}"]`);
+  quantityDiv.textContent = cart[id]?cart[id]:0;
 
-  console.log(basket);
-  update(selectedItem.id);
-  localStorage.setItem("data", JSON.stringify(basket));
-};
+  updateCartAmount();  
+  saveCart();
+  
+}
 
-/**
- * ! used to decrease the selected product item quantity by 1
- */
-
-let decrement = (id) => {
-  let selectedItem = id;
-  let search = basket.find((x) => x.id === selectedItem.id);
-
-  if (search === undefined) return;
-  else if (search.item === 0) return;
-  else {
-    search.item -= 1;
+function order(id){
+  if(id in cart){
+    cart[id]++;
+  }else{
+    cart[id] = 1;
   }
+  // document.querySelector(".quantity[data-pid]").innerText= id;
+  let quantityDiv = document.querySelector(`.quantity[data-pid="${id}"]`);
+  quantityDiv.textContent = cart[id];
+  updateCartAmount();
+  saveCart();
+}
 
-  update(selectedItem.id);
-  basket = basket.filter((x) => x.item !== 0);
-  console.log(basket);
-  localStorage.setItem("data", JSON.stringify(basket));
-};
+function saveCart(){
+  window.localStorage.setItem("cart", JSON.stringify(cart));
+  window.localStorage.setItem("products", JSON.stringify(products));
+  
+ 
+ 
+}
 
-/**
- * ! To update the digits of picked items on each item card
- */
+function updateCartAmount(){
+  let total = 0;
+  for (let id in cart) {
+    total += cart[id];
+  }
+  document.getElementById("cartAmount").textContent = total;
 
-let update = (id) => {
-  let search = basket.find((x) => x.id === id);
-  document.getElementById(id).innerHTML = search.item;
-  calculation();
-};
+  window.localStorage.setItem("cartAmount", total);
+ 
+  saveCart();
+}      
 
-/**
- * ! To calculate total amount of selected Items
- */
-
-let calculation = () => {
-  let cartIcon = document.getElementById("cartAmount");
-  cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0);
-};
-
-calculation();

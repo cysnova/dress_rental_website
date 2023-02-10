@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/utility.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shopping Cart</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-</head>
+  <body>
+    <div class="navbar">
+      <a href="index.html">
+        <h2>look gorgeous</h2>
+      </a>
 
-<body>
-  <div class="navbar">
-    <a href="index.html">
-      <h2>look gorgeous</h2>
-    </a>
-
-    <a href="cart.html">
-      <div class="cart">
-        <i class="bi bi-cart2"></i>
-        <div id="cartAmount" class="cartAmount">0</div>
+      <a href="cart.html">
+        <div class="cart">
+          <i class="bi bi-cart2"></i>
+          <div id="cartAmount" class="cartAmount">0</div>
+        </div>
+      </a>
+    </div>
+    <section class="container">
+      <div class="container-top">
+        <div class="totalPrice">Total Bill: $ 0</div>
+        <button type="button" class="btn-checkout">Checkout</button>
+        <button type="button" class="btn-clrcart">Clear Cart</button>
       </div>
-    </a>
-
-  </div>
-
-  <div id="label" class="text-center"></div>
-
-  <div class="shopping-cart" id="shopping-cart"></div>
-</body>
-<script src="src/Data.js"></script>
-<script src="src/cart.js"></script>
-
+      <div class="cards-wrapper cart-container"></div>
+    </section>
+  </body>
+  <script src="JS/index.js"></script>
+  <script src="JS/cart.js"></script>
 </html>
