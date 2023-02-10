@@ -374,11 +374,21 @@ img {
     }
 
     .container .cart-card{
+        margin-top: 20px;
         flex: 100%;
         max-width: 100%;
         height:max-content;
     }
  
+    .btn-checkout:hover {
+        height:20px;
+        width:auto;
+    }
+    
+    .btn-clrcart:hover {
+        height:20px;
+        width:auto;
+    }
 }
 
 
