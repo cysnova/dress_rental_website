@@ -6,7 +6,6 @@ var cart = {}
 
 async function generateShop(){
   
-    console.log("Generating shop...")
     const res = await fetch(
         "https://jsonblob.com/api/1072619027205210112"
     )
@@ -16,7 +15,7 @@ async function generateShop(){
      const gallery= document.getElementsByClassName("cards-wrapper")[0];
      products = data.shop;
      for (var shop of products){
-      console.log(shop)
+    
       const box = `
       
         <div class="card">
@@ -68,7 +67,7 @@ function order(id){
   }else{
     cart[id] = 1;
   }
-  // document.querySelector(".quantity[data-pid]").innerText= id;
+  
   let quantityDiv = document.querySelector(`.quantity[data-pid="${id}"]`);
   quantityDiv.textContent = cart[id];
   updateCartAmount();

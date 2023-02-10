@@ -66,7 +66,7 @@ if (!isNaN(cartAmount)) {
 
 document.getElementsByClassName("btn-clrcart")[0].addEventListener("click", clearCart);
 document.getElementsByClassName("btn-checkout")[0].addEventListener("click", function(){
-  window.location.replace("#checkout");
+  window.location.replace("/index.html");
 });
 
 function removeItem(pid) {
