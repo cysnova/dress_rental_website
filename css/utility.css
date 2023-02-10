@@ -3,7 +3,7 @@ i{
     margin:5px;
 }
 /* Button */
-.btn,.btn-checkout,.btn-clrcart{  
+.bi-trash-lg,.btn,.btn-checkout,.btn-clrcart{  
     display: inline-block;
     padding: 10px 30px;
     color: #fff;
@@ -22,18 +22,19 @@ i{
     opacity: 0.8;
     color: black;
     background-color: #be779c;
-    
-    
 }
 
 .btn-clrcart:hover {
     opacity: 0.8;
     color: black;
     background-color: #be779c;
-  
 }
 
-
+.bi-trash-lg:hover {
+    opacity: 0.8;
+    color: black;
+    background-color: #be779c;
+}
 .btn, .bg {
    background: #b27092;
    color: #fff;

@@ -33,6 +33,7 @@ function generateCartItems(){
         <i class="bi bi-plus-lg" onclick="add('${pid}')"></i>
       </div>
       <div class="subTotal">$${subtotal}</div>
+      <i class="bi bi-trash3-fill" onclick="removeItem('${pid}')"></i>
     </div>
     <img src="${product.img}" class="container-card-img" />
   </div>`
@@ -69,3 +70,14 @@ document.getElementsByClassName("btn-clrcart")[0].addEventListener("click", clea
 document.getElementsByClassName("btn-checkout")[0].addEventListener("click", function(){
   window.location.replace("#checkout");
 });
+
+function removeItem(pid) {
+  if (cart[pid]) {
+    cartAmount -= cart[pid];
+    delete cart[pid];
+    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem("cartAmount", cartAmount);
+    document.getElementById("cartAmount").textContent = cartAmount;
+    location.reload();
+  }
+}

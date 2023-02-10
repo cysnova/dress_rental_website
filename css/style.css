@@ -304,10 +304,7 @@ img {
     border-radius: 10px;
   }
 
-  .text-center {
-    text-align: center;
-    margin-bottom: 20px;
-  }
+
   .quantity {
     font-size: 21px;
 }
@@ -367,6 +364,8 @@ img {
     }
 
     .container-card-img{
+        padding:10px;
+        margin:20px 10px;
         height: auto;
         max-width: 100%;
         object-fit: cover;
@@ -374,7 +373,7 @@ img {
     }
 
     .container .cart-card{
-        margin-top: 20px;
+        margin-top: 40px;
         flex: 100%;
         max-width: 100%;
         height:max-content;
@@ -401,14 +400,17 @@ img {
         top:100px;
         justify-content: center;
         gap: 15px;
-        margin:10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
         padding:10px;
+        padding-bottom:30px;
         
       }
 
 
 .totalPrice{
-    font-size: 50px;
+    font-size: 40px;
+   
 }
 
 .cart-container{
