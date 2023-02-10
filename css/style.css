@@ -381,8 +381,32 @@ img {
     }
  
     .btn-checkout:hover {
-        height:20px;
-        width:auto;
+       
+            opacity: 0.8;
+            color: black;
+            background-color: #be779c;
+            font-size:10px;
+            border:1px solid black
+        }
+        
+        .btn-clrcart:hover {
+            opacity: 0.8;
+            color: black;
+            background-color: #be779c;
+            font-size:10px;
+            border:1px solid black
+        }
+        
+            font-size:15px;
+     }
+        
+        .btn-clrcart:hover {
+            opacity: 0.8;
+            color: black;
+            background-color: #be779c;
+            font-size:15px;
+        }
+        
     }
     
     .btn-clrcart:hover {
