@@ -365,6 +365,19 @@ img {
     object-fit: cover;
   
     }
+
+    .container-card-img{
+        height: auto;
+        max-width: 100%;
+        object-fit: cover;
+
+    }
+
+    .container .cart-card{
+        flex: 100%;
+        max-width: 100%;
+        height:max-content;
+    }
  
 }
 

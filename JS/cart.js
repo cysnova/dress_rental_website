@@ -34,7 +34,7 @@ function generateCartItems(){
       </div>
       <div class="subTotal">$${subtotal}</div>
     </div>
-    <img src="${product.img}" />
+    <img src="${product.img}" class="container-card-img" />
   </div>`
   }
   
